@@ -14,16 +14,20 @@ class mainwindow(QWidget):
 
     def makeWindow(self):
         label = QLabel("My First Widget QLabel", self) # QLabel을 생성하면서 부모를 self로 설정
+
         label.move(50,50) # label을 (50,50) 위치로 이동
-        # font = QFont('Arial', 20, QFont.Weight.ExtraBold) # 폰트 설정
-        # label.setFont(font) # label에 폰트 설정
-        # label.setStyleSheet("color: green; background-color: yellow") # label의 글자색을 초록색, 배경색을 노란색으로 설정
-        # label.setText("Change Text") # label의 텍스트를 변경
-        # pixmap = QPixmap('src/images/python.png') # 이미지 불러오기
-        # label.setPixmap(pixmap) # label에 이미지 설정
+
+        font = QFont('Arial', 20, QFont.Weight.ExtraBold) # 폰트 설정
+        label.setFont(font) # label에 폰트 설정
+        label.setStyleSheet("color: green; background-color: yellow") # label의 글자색을 초록색, 배경색을 노란색으로 설정
+        label.setText("Change Text") # label의 텍스트를 변경
+
+        pixmap = QPixmap('src/images/python.png') # 이미지 불러오기
+        label.setPixmap(pixmap) # label에 이미지 설정
+
         movie=QMovie('src/images/moving-cute-boxes-cat-tired.gif') # 동영상 불러오기
-        label.setMovie(movie)
-        movie.start() # 동영상 재생
+        label.setMovie(movie) # label에 동영상 설정
+        movie.start() # 동영상 재생(필수)
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = mainwindow()

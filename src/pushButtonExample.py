@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QLineEdit
 from PyQt6.QtGui import QIcon, QFont
 from PyQt6.QtCore import QSize
 import sys
